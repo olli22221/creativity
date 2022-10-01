@@ -1,0 +1,10 @@
+bertopic==0.11.0
+flask
+gdown
+pandas
+pydantic
+numpy
+scikit-learn
+scipy
+sentence-transformers
+umap-learn
