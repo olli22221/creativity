@@ -6,6 +6,7 @@ import os.path
 from pydantic import BaseModel
 from typing import List, Union
 from flask import Flask, request,Response, jsonify
+from flask_cors import cross_origin
 
 
 class Source(BaseModel):
@@ -27,6 +28,7 @@ origins = [
 ]
 
 @app.route('/creativity', methods=['POST'])
+@cross_origin()
 def creativity():
     if request.method == 'POST':
         text = request.json['text']
@@ -46,6 +48,7 @@ def creativity():
         return Response(response,status=200)
 
 @app.route('/models', methods=['GET'])
+@cross_origin()
 def load_models():
     response = "Error"
     # check if file exists
