@@ -37,7 +37,7 @@ def creativity():
 
         response= {}
         response['fluency'] = fluency
-        response['flexability'] = flexibility
+        response['flexibility'] = flexibility
         response['originality'] = originality
         response['topics'] = str(topics)
         #answer = Answer(fluency=fluency,
